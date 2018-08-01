@@ -1,4 +1,7 @@
 /*helpers*/
+section {
+    padding: 100px 0;
+}
 
 .social-icons {
     display: flex;
@@ -6,7 +9,7 @@
 }
 
 .social-icons a {
-    background-color: #333;
+    background-color: #222222;
     color: #fff;
     height: 50px;
     width: 50px;
@@ -20,25 +23,17 @@
     background-color: #0ed8d6;
 
 }
+.mb-10 {
+    margin-bottom: 10px;
+}
+/*Font Styles*/
 
 body {
     font-family: DroidSerif Italic;
-    font-style: italic;
-    color: #777777;
+/*    font-style: italic;*/
+/*    color: #777777;*/
 }
 
-nav#main-nav {
-    background-color: transparent;
-    transition: background 0.2s linear;
-    color: white;
-
-}
-
-nav#main-nav:hover {
-    color: #777777;
-}
-
-nav#main-nav a,
 h1,
 h2,
 h3,
@@ -46,12 +41,41 @@ h4,
 h5,
 h6,
 button {
-    font-family: Montserrat sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-weight: bold;
     font-style: normal;
     color: #333333;
-    /*    font-style: italic;*/
-    /*    color: white;*/
+}
+nav#main-nav a,
+input[type="submit"]{
+    color: white;
+    
+    
+}
+
+p {
+   color: #777777;
+    font-family: 'Lora', serif;
+    font-style: italic;
+}
+
+p.font-robotoslab,
+a.font-robotoslab{
+    font-family: 'Roboto Slab', serif;
+    font-style: normal;
+    color: #777777;
+}
+/*/nav start*/
+
+nav#main-nav div a{
+    background-color: transparent;
+    transition: all 0.2s linear;
+    color: white;
+    font-family: sans-serif;
+}
+
+nav#main-nav div a:hover {
+    color: #222222;
 }
 
 nav#main-nav div a,
@@ -59,21 +83,18 @@ nav#main-nav div a,
 #header h1 {
     text-transform: uppercase;
     color: white;
-    font-family: sans-serif;
     font-style: normal;
     font-weight: bold;
-    transition: color 0.2s linear;
 }
-
-nav#main-nav div a:hover {
-    color: #777777;
+#header h2{
+    text-transform: none;
+    font-family:serif;
 }
 
 /*mocniejszy:element o id i o klasie:*/
-
+/*klasa dodana w js:*/
 #main-nav.changeColor {
     background: rgb(14, 216, 214, 0.6);
-
 }
 
 header#header {
@@ -97,22 +118,18 @@ header#header {
     font-weight: 400;
 }
 
-#header .main-header h1 {
-    text-transform: uppercase;
-    font-weight: bold;
-    font-family: sans-serif;
-    font-style: normal;
-}
 
-#header .main-header button.button-header {
+.button-custom,
+input[type="submit"]{
     text-transform: uppercase;
     background-color: #0ed8d6;
     border-color: #0ed8d6;
-    font-style: normal;
     transition: all 0.4s;
+    font-weight: bold;
 }
 
-#header .main-header button.button-header:hover {
+.button-custom:hover,
+input[type="submit"]:hover{
     background-color: white;
     color: #0ed8d6;
 }
@@ -120,22 +137,19 @@ header#header {
 
 /*Sekcja Services start*/
 
-#services {
-    margin: 100px 0px;
+section#services h2{
+    text-transform: uppercase;
 }
-
-section#services h2,
-section#services h3,
-    {
-    color: #333333;
+#services .container p{
+    padding-bottom: 30px; 
 }
 
 #services .service-inner .fa {
     background-color: #0ed8d6;
     border: 1px solid #0ed8d6;
-    width: 50px;
-    height: 50px;
-    line-height: 50px;
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
     color: #fff;
     border-radius: 50%;
     font-size: 24px;
@@ -153,17 +167,30 @@ section#services h3,
 
 /*Sekcja Portfolio start*/
 
-#portfolio {
+section#portfolio {
     background-color: #f7f7f7;
-    margin: 100px 0px;
-    padding: 50px 0;
+    
 }
+
+#portfolio h2{
+    text-transform: uppercase;
+}
+#portfolio > .container >p {
+    padding-bottom: 30px; 
+}
+
 
 .content-portfolio {
     background-color: white;
-    border: 1px dashed #e2dfdf;
-    margin-bottom: 35px;
+    border: 1px solid #f0e6e6;
+    margin-bottom: 30px;
 }
+
+.content-portfolio > h3{
+    padding-top: 20px;
+}
+
+
 
 /*do overflow potrzebuje na szywno wys i szerokosc. szer juz jest*/
 
@@ -324,7 +351,7 @@ section#meet-our-team .content-team div.team-icons a i:hover{
 }
 
 #contact-us .container p {
-    margin: 20px;
+    padding-bottom: 45px;
     color: white;
 }
 
@@ -333,8 +360,14 @@ section#meet-our-team .content-team div.team-icons a i:hover{
     padding: 30px;
 }
 
+#contact-us .container .inputs-contact input[placeholder],
+#contact-us .container .form textarea[placeholder]{
+  text-transform: uppercase;
+}
+
 #contact-us .container .form textarea {
     height: calc(100% - 15px);
+   
 
 }
 
@@ -348,6 +381,11 @@ section#meet-our-team .content-team div.team-icons a i:hover{
     border: none;
     border-radius: 5px;
 }
+#contact-us .form input[type="submit"]:hover{
+     color: #0ed8d6;
+    background-color: #fff;
+}
+
 
 .line-height{
     line-height: 70px;
@@ -364,7 +402,9 @@ section#meet-our-team .content-team div.team-icons a i:hover{
 }
 .line-height ul li{
     display: inline-block;
+    padding: 0 10px;
 }
+
 
 #footer .container p,
 #footer .container .footer-nav a{
