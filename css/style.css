@@ -94,7 +94,7 @@ nav#main-nav div a,
 /*mocniejszy:element o id i o klasie:*/
 /*klasa dodana w js:*/
 #main-nav.changeColor {
-    background: rgb(14, 216, 214, 0.6);
+    background: rgba(14, 216, 214, 0.6);
 }
 
 header#header {
@@ -232,7 +232,6 @@ section#portfolio {
     background-position: center;
 
 }
-
 .background-5 {
 
     background-image: url(../img/portfolio/house_with_blue_doors.jpg);
@@ -241,6 +240,8 @@ section#portfolio {
     background-position: center;
 
 }
+
+
 
 .background-6 {
 
@@ -296,7 +297,7 @@ section#meet-our-team > h2 {
     padding-bottom: 10px;
 }
 
-section#meet-our-team > .container > p {}
+
 
 section#meet-our-team .content-team figure img {
     width: 70%;
